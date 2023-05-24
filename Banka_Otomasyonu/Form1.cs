@@ -20,6 +20,7 @@ namespace Banka_Otomasyonu
         SqlConnection con = new SqlConnection("server = DESKTOP-OVD1DH3\\SQLEXPRESS ; initial catalog = Bankamatik; integrated security = sspi");
         public static string adSoyad = "";
         public static int mID;
+        public static float mBakiye = 0.0f;
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -45,6 +46,10 @@ namespace Banka_Otomasyonu
                     yi.Show();
                     this.Hide();
                 }
+                else
+                {
+                    MessageBox.Show("Hatalý Kullanýcý Adý/TC veya Parola !", "Hatalý Giriþ Denemesi");
+                }
             }
             else
             {
@@ -58,6 +63,7 @@ namespace Banka_Otomasyonu
                 {
                     adSoyad = dr["adSoyad"].ToString();
                     mID = int.Parse(dr["ID"].ToString());
+                    mBakiye = float.Parse(dr["bakiye"].ToString());
                     sonuc = true;
                 }
                 con.Close();
@@ -67,14 +73,16 @@ namespace Banka_Otomasyonu
                     sonuc = false;
                     Müsteriislem mi = new Müsteriislem();
                     mi.Show();
+                    this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("Hatalý Kullanýcý Adý/TC veya Parola !", "Hatalý Giriþ Denemesi");
                 }
-
+                
             }
-
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
     }
 }

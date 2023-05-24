@@ -16,5 +16,39 @@ namespace Banka_Otomasyonu
         {
             InitializeComponent();
         }
+
+        private void Yetkili_işlem_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            MusteriEkle me = new MusteriEkle();
+            me.Show();
+        }
+
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            MusteriAra ma= new MusteriAra();    
+            ma.Show();  
+        }
     }
 }
