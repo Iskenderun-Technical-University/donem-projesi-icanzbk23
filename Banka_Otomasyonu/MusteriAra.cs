@@ -36,9 +36,9 @@ namespace Banka_Otomasyonu
         private void button1_Click(object sender, EventArgs e)
         {
 
-            SqlCommand komut = new SqlCommand("select * from musteriler where Id = @p1 or tcNo=@p2)", con);
-            komut.Parameters.AddWithValue("@p1", txtId);
-            komut.Parameters.AddWithValue("@p1", txtId);
+            SqlCommand komut = new SqlCommand("select * from musteriler where Id = @p1 or tcNo=@p2", con);
+            komut.Parameters.AddWithValue("@p1", txtAra.Text);
+            komut.Parameters.AddWithValue("@p2", txtAra.Text);
             con.Open();
             SqlDataReader dr = komut.ExecuteReader();
 

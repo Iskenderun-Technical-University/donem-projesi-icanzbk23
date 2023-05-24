@@ -47,8 +47,14 @@ namespace Banka_Otomasyonu
 
         private void btnAra_Click(object sender, EventArgs e)
         {
-            MusteriAra ma= new MusteriAra();    
-            ma.Show();  
+            MusteriAra ma = new MusteriAra();
+            ma.Show();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            Musteriguncelle mg= new Musteriguncelle();  
+            mg.Show();
         }
     }
 }
