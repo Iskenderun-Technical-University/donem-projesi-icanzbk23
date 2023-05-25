@@ -95,8 +95,9 @@
             btnListele.Name = "btnListele";
             btnListele.Size = new Size(242, 39);
             btnListele.TabIndex = 4;
-            btnListele.Text = "müşterileri Listele";
+            btnListele.Text = "Müşterileri Listele";
             btnListele.UseVisualStyleBackColor = true;
+            btnListele.Click += btnListele_Click;
             // 
             // btnSil
             // 

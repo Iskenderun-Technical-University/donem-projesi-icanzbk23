@@ -59,8 +59,14 @@ namespace Banka_Otomasyonu
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            MusteriSil ms= new MusteriSil();    
+            MusteriSil ms = new MusteriSil();
             ms.Show();
+        }
+
+        private void btnListele_Click(object sender, EventArgs e)
+        {
+            MusteriListeleme ml = new MusteriListeleme();   
+            ml.Show();
         }
     }
 }

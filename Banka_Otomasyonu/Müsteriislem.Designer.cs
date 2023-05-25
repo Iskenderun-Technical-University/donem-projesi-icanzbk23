@@ -121,6 +121,7 @@
             btnParaYatir.TabIndex = 1;
             btnParaYatir.Text = "Para Yatır";
             btnParaYatir.UseVisualStyleBackColor = true;
+            btnParaYatir.Click += btnParaYatir_Click;
             // 
             // btnParaCek
             // 
@@ -131,6 +132,7 @@
             btnParaCek.TabIndex = 0;
             btnParaCek.Text = "Para Çek";
             btnParaCek.UseVisualStyleBackColor = true;
+            btnParaCek.Click += btnParaCek_Click;
             // 
             // label2
             // 

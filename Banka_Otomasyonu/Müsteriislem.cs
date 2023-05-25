@@ -35,5 +35,17 @@ namespace Banka_Otomasyonu
             lblHesapNo.Text = Form1.mID.ToString();
 
         }
+
+        private void btnParaCek_Click(object sender, EventArgs e)
+        {
+            ParaCek pc = new ParaCek();
+            pc.Show();
+        }
+
+        private void btnParaYatir_Click(object sender, EventArgs e)
+        {
+            ParaYatır py = new ParaYatır();
+            py.Show();
+        }
     }
 }

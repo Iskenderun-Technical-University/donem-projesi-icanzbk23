@@ -58,7 +58,7 @@ namespace Banka_Otomasyonu
         private void button2_Click(object sender, EventArgs e)
         {
 
-            SqlCommand komut = new SqlCommand("update musteriler set adSoyad=@p1, adres=@p2, telefon=@p3 where Id = @p4 or tcNo=@p5)", con);
+            SqlCommand komut = new SqlCommand("update musteriler set adSoyad=@p1, adres=@p2, telefon=@p3 where Id = @p4 or tcNo=@p5", con);
             komut.Parameters.AddWithValue("@p4", txtAra.Text);
             komut.Parameters.AddWithValue("@p5", txtAra.Text);
             komut.Parameters.AddWithValue("@p1", txtAdSoyad.Text);
