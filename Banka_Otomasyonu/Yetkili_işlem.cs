@@ -53,8 +53,14 @@ namespace Banka_Otomasyonu
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            Musteriguncelle mg= new Musteriguncelle();  
+            Musteriguncelle mg = new Musteriguncelle();
             mg.Show();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            MusteriSil ms= new MusteriSil();    
+            ms.Show();
         }
     }
 }

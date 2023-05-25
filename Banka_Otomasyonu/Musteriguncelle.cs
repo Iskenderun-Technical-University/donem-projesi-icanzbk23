@@ -19,9 +19,9 @@ namespace Banka_Otomasyonu
         SqlConnection con = new SqlConnection("server = DESKTOP-OVD1DH3\\SQLEXPRESS ; initial catalog = Bankamatik; integrated security = sspi");
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("select * from musteriler where Id = @p1 or tcNo=@p2)", con);
+            SqlCommand komut = new SqlCommand("select * from musteriler where Id = @p1 or tcNo=@p2", con);
             komut.Parameters.AddWithValue("@p1", txtAra.Text);
-            komut.Parameters.AddWithValue("@p1", txtAra.Text);
+            komut.Parameters.AddWithValue("@p2", txtAra.Text);
             con.Open();
             SqlDataReader dr = komut.ExecuteReader();
 
@@ -64,9 +64,9 @@ namespace Banka_Otomasyonu
             komut.Parameters.AddWithValue("@p1", txtAdSoyad.Text);
             komut.Parameters.AddWithValue("@p2", txtAdres.Text);
             komut.Parameters.AddWithValue("@p3", txtTel.Text);
-            
+
             con.Open();
-           int sonuc = komut.ExecuteNonQuery();
+            int sonuc = komut.ExecuteNonQuery();
 
 
 
@@ -92,8 +92,69 @@ namespace Banka_Otomasyonu
             con.Close();
 
 
-        
-    }
+
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void txtBakiye_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+        }
+
+        private void txtTel_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+        }
+
+        private void txtAdres_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtAdSoyad_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtTcNo_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
 
