@@ -66,7 +66,7 @@ namespace Banka_Otomasyonu
 
                 SqlCommand komut2 = new SqlCommand("update musteriler set bakiye = bakiye + @p3 where Id = @p4", con);
                 komut2.Parameters.AddWithValue("@p3", txtMiktar.Text);
-                komut2.Parameters.AddWithValue("@p2", txtNo.Text);
+                komut2.Parameters.AddWithValue("@p4", txtNo.Text);
 
 
                 /* con.Open();
