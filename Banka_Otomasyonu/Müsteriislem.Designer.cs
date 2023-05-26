@@ -101,6 +101,7 @@
             btnHavale.TabIndex = 3;
             btnHavale.Text = "Havale/EFT";
             btnHavale.UseVisualStyleBackColor = true;
+            btnHavale.Click += btnHavale_Click;
             // 
             // btnBakiyeGör
             // 
@@ -111,6 +112,7 @@
             btnBakiyeGör.TabIndex = 2;
             btnBakiyeGör.Text = "Bakiye Görüntüle";
             btnBakiyeGör.UseVisualStyleBackColor = true;
+            btnBakiyeGör.Click += btnBakiyeGör_Click;
             // 
             // btnParaYatir
             // 

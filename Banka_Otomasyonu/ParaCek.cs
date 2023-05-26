@@ -28,7 +28,7 @@ namespace Banka_Otomasyonu
             }
             else
             {
-                SqlCommand komut = new SqlCommand("update musteriler set bakiye -= @p1, where Id = @p2", con);
+                SqlCommand komut = new SqlCommand("update musteriler set bakiye -= @p1 where Id = @p2", con);
                 
                 komut.Parameters.AddWithValue("@p1", sayi);
                 komut.Parameters.AddWithValue("@p2", Form1.mID);
@@ -43,6 +43,7 @@ namespace Banka_Otomasyonu
                 if (sonuc == 1)
                 {
                     MessageBox.Show("Para Çekme İşlemi Yapıldı ", "Para Çekme İşlemi Tamam", MessageBoxButtons.OK);
+                    Form1.mBakiye -= sayi;
 
                 }
                 else
