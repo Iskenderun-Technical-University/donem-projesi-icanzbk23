@@ -57,7 +57,19 @@ namespace Banka_Otomasyonu
         private void btnHavale_Click(object sender, EventArgs e)
         {
             Havale h = new Havale();
-            h.Show();   
+            h.Show();
+        }
+
+        private void btnSifre_Click(object sender, EventArgs e)
+        {
+            SifreDegistirme sd = new SifreDegistirme();
+            sd.Show();
+        }
+
+        private void btnHesapH_Click(object sender, EventArgs e)
+        {
+            HesapHareket hh = new HesapHareket();
+            hh.Show();
         }
     }
 }

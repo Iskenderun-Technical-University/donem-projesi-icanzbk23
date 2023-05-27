@@ -69,6 +69,7 @@
             btnHesapH.TabIndex = 6;
             btnHesapH.Text = "Hesap Hareketleri";
             btnHesapH.UseVisualStyleBackColor = true;
+            btnHesapH.Click += btnHesapH_Click;
             // 
             // btnCikis
             // 
@@ -91,6 +92,7 @@
             btnSifre.TabIndex = 4;
             btnSifre.Text = "Şifre Değiştir";
             btnSifre.UseVisualStyleBackColor = true;
+            btnSifre.Click += btnSifre_Click;
             // 
             // btnHavale
             // 
@@ -201,6 +203,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Müsteriislem";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Müşteri İşlemleri";
             Load += Müsteriislem_Load;
             groupBox1.ResumeLayout(false);

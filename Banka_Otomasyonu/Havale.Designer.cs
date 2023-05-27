@@ -115,6 +115,7 @@
             Name = "Havale";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Havale/EFT";
+            Load += Havale_Load;
             ResumeLayout(false);
             PerformLayout();
         }

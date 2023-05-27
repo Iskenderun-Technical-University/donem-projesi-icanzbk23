@@ -23,46 +23,46 @@ namespace Banka_Otomasyonu
         {
 
             float sayi = float.Parse(txtMiktar.Text);
-           /* int aliciNo = int.Parse(txtNo.Text);
+            /* int aliciNo = int.Parse(txtNo.Text);
 
-            SqlCommand komut = new SqlCommand("select * from musteriler where Id = @p1", con);
-            komut.Parameters.AddWithValue("@p1", txtNo.Text);
-            bool sonuc = false;
-            
-            con.Open();
-            SqlDataReader dr = komut.ExecuteReader();
+             SqlCommand komut = new SqlCommand("select * from musteriler where Id = @p1", con);
+             komut.Parameters.AddWithValue("@p1", txtNo.Text);
+             bool sonuc = false;
 
-
-            */
-
-/*
-            if (dr.Read())
-            {
-                sonuc = true;
-                con.Close();
-            }
-            else if( !sonuc)
-            {
+             con.Open();
+             SqlDataReader dr = komut.ExecuteReader();
 
 
-                MessageBox.Show("Alıcı Hesap No Hatalı !","Havala/EFT işlemi");
-                con.Close();
-            }
+             */
 
-            */
+            /*
+                        if (dr.Read())
+                        {
+                            sonuc = true;
+                            con.Close();
+                        }
+                        else if( !sonuc)
+                        {
 
-             if (sayi > Form1.mBakiye)
+
+                            MessageBox.Show("Alıcı Hesap No Hatalı !","Havala/EFT işlemi");
+                            con.Close();
+                        }
+
+                        */
+
+            if (sayi > Form1.mBakiye)
             {
                 MessageBox.Show("Yetersiz Bakiye", "Para Çekme İşlemi");
             }
             else
             {
                 SqlCommand komut = new SqlCommand("update musteriler set bakiye = bakiye - @p1 where Id = @p2", con);
-               
+
 
                 komut.Parameters.AddWithValue("@p1", sayi);
                 komut.Parameters.AddWithValue("@p2", Form1.mID);
-                
+
 
                 SqlCommand komut2 = new SqlCommand("update musteriler set bakiye = bakiye + @p3 where Id = @p4", con);
                 komut2.Parameters.AddWithValue("@p3", txtMiktar.Text);
@@ -85,7 +85,7 @@ namespace Banka_Otomasyonu
 
                 if (sayi < 10)
                 {
-                    MessageBox.Show("Lütfen 10 TL ve üstü bir değer giriniz ", "Eksik kayıt hatası",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("Lütfen 10 TL ve üstü bir değer giriniz ", "Eksik kayıt hatası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -97,8 +97,10 @@ namespace Banka_Otomasyonu
                         con.Open();
                         komut.ExecuteNonQuery();
                         con.Close();
-                        MessageBox.Show("Havale İşlemi Gerçekleştirildi","Havale/EFT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Havale İşlemi Gerçekleştirildi", "Havale/EFT", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Form1.mBakiye -= sayi;
+                        HareketKaydet.kaydet(Form1.mID, (sayi + " TL Havale Gönderildi."));
+                        HareketKaydet.kaydet(int.Parse(txtNo.Text), (sayi + " TL Havale Alındı."));
                     }
                     else
                     {
@@ -108,9 +110,14 @@ namespace Banka_Otomasyonu
                 }
                 txtMiktar.Text = "";
                 txtNo.Text = "";
-                
-                
+
+
             }
+        }
+
+        private void Havale_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

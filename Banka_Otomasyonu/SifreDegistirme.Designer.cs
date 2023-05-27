@@ -1,6 +1,6 @@
 ﻿namespace Banka_Otomasyonu
 {
-    partial class ParaYatır
+    partial class SifreDegistirme
     {
         /// <summary>
         /// Required designer variable.
@@ -28,80 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label3 = new Label();
             button1 = new Button();
-            maskedTextBox1 = new MaskedTextBox();
             label2 = new Label();
             label1 = new Label();
+            txtEski = new TextBox();
+            txtYeni = new TextBox();
             SuspendLayout();
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.CornflowerBlue;
+            label3.Location = new Point(12, 146);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 20);
+            label3.TabIndex = 18;
+            label3.Text = "Yeni Şifre:";
             // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.Crimson;
-            button1.Location = new Point(116, 155);
+            button1.Location = new Point(163, 195);
             button1.Name = "button1";
-            button1.Size = new Size(154, 46);
-            button1.TabIndex = 7;
-            button1.Text = "Para Yatır";
+            button1.Size = new Size(198, 42);
+            button1.TabIndex = 17;
+            button1.Text = "Şifre Değiştir";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            maskedTextBox1.Location = new Point(112, 88);
-            maskedTextBox1.Mask = "000000000000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(158, 30);
-            maskedTextBox1.TabIndex = 6;
-            maskedTextBox1.ValidatingType = typeof(int);
-            maskedTextBox1.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.CornflowerBlue;
-            label2.Location = new Point(27, 91);
+            label2.Location = new Point(12, 96);
             label2.Name = "label2";
-            label2.Size = new Size(76, 20);
-            label2.TabIndex = 5;
-            label2.Text = "Miktar(₺)";
-            label2.Click += label2_Click;
+            label2.Size = new Size(86, 20);
+            label2.TabIndex = 15;
+            label2.Text = "Eski Şifre:";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Crimson;
-            label1.Location = new Point(27, 37);
+            label1.Location = new Point(9, 40);
             label1.Name = "label1";
-            label1.Size = new Size(328, 24);
-            label1.TabIndex = 4;
-            label1.Text = "Ne Kadar Para Yatırmak İstersiniz?";
-            label1.Click += label1_Click;
+            label1.Size = new Size(217, 24);
+            label1.TabIndex = 14;
+            label1.Text = "Şifre Değiştirme İşlemi";
             // 
-            // ParaYatır
+            // txtEski
+            // 
+            txtEski.Location = new Point(163, 96);
+            txtEski.Name = "txtEski";
+            txtEski.Size = new Size(198, 26);
+            txtEski.TabIndex = 19;
+            // 
+            // txtYeni
+            // 
+            txtYeni.Location = new Point(161, 144);
+            txtYeni.Name = "txtYeni";
+            txtYeni.Size = new Size(198, 26);
+            txtYeni.TabIndex = 20;
+            // 
+            // SifreDegistirme
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(403, 237);
+            ClientSize = new Size(409, 316);
+            Controls.Add(txtYeni);
+            Controls.Add(txtEski);
+            Controls.Add(label3);
             Controls.Add(button1);
-            Controls.Add(maskedTextBox1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "ParaYatır";
+            Name = "SifreDegistirme";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Para Yatırma İşlemi";
+            Text = "SifreDegistirme";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private Label label3;
         private Button button1;
-        private MaskedTextBox maskedTextBox1;
         private Label label2;
         private Label label1;
+        private TextBox txtEski;
+        private TextBox txtYeni;
     }
 }

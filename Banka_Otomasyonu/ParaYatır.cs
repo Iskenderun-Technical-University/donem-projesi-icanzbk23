@@ -44,7 +44,7 @@ namespace Banka_Otomasyonu
                 {
                     MessageBox.Show("Para Yatırma İşlemi Yapıldı ", "Para Yatırma İşlemi Tamam", MessageBoxButtons.OK);
                     Form1.mBakiye += sayi;
-
+                    HareketKaydet.kaydet(Form1.mID, (sayi + " TL Para Yatırıldı."));
                 }
                 else
                 {
@@ -56,6 +56,19 @@ namespace Banka_Otomasyonu
                 con.Close();
                 maskedTextBox1.Text = "";
             }
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
 }
