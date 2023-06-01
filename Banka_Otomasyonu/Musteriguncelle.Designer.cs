@@ -45,6 +45,8 @@
             label2 = new Label();
             label1 = new Label();
             button2 = new Button();
+            label9 = new Label();
+            txtDurum = new MaskedTextBox();
             SuspendLayout();
             // 
             // txtAra
@@ -69,7 +71,7 @@
             // txtId
             // 
             txtId.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            txtId.Location = new Point(154, 118);
+            txtId.Location = new Point(154, 115);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(204, 28);
@@ -102,7 +104,7 @@
             // txtBakiye
             // 
             txtBakiye.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            txtBakiye.Location = new Point(154, 373);
+            txtBakiye.Location = new Point(154, 360);
             txtBakiye.Mask = "000000000000";
             txtBakiye.Name = "txtBakiye";
             txtBakiye.ReadOnly = true;
@@ -114,7 +116,7 @@
             // txtTel
             // 
             txtTel.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            txtTel.Location = new Point(154, 322);
+            txtTel.Location = new Point(154, 311);
             txtTel.Mask = "(999) 000-0000";
             txtTel.Name = "txtTel";
             txtTel.Size = new Size(204, 28);
@@ -124,7 +126,7 @@
             // txtAdres
             // 
             txtAdres.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            txtAdres.Location = new Point(154, 271);
+            txtAdres.Location = new Point(154, 262);
             txtAdres.Name = "txtAdres";
             txtAdres.Size = new Size(204, 28);
             txtAdres.TabIndex = 28;
@@ -133,7 +135,7 @@
             // txtAdSoyad
             // 
             txtAdSoyad.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            txtAdSoyad.Location = new Point(154, 220);
+            txtAdSoyad.Location = new Point(154, 213);
             txtAdSoyad.Name = "txtAdSoyad";
             txtAdSoyad.Size = new Size(204, 28);
             txtAdSoyad.TabIndex = 26;
@@ -142,7 +144,7 @@
             // txtTcNo
             // 
             txtTcNo.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            txtTcNo.Location = new Point(154, 169);
+            txtTcNo.Location = new Point(154, 164);
             txtTcNo.Name = "txtTcNo";
             txtTcNo.ReadOnly = true;
             txtTcNo.Size = new Size(204, 28);
@@ -165,7 +167,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(36, 373);
+            label5.Location = new Point(36, 363);
             label5.Name = "label5";
             label5.Size = new Size(69, 21);
             label5.TabIndex = 33;
@@ -176,7 +178,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(36, 322);
+            label4.Location = new Point(36, 314);
             label4.Name = "label4";
             label4.Size = new Size(75, 21);
             label4.TabIndex = 31;
@@ -187,7 +189,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(36, 271);
+            label3.Location = new Point(36, 265);
             label3.Name = "label3";
             label3.Size = new Size(61, 21);
             label3.TabIndex = 29;
@@ -198,7 +200,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(36, 220);
+            label2.Location = new Point(36, 216);
             label2.Name = "label2";
             label2.Size = new Size(105, 21);
             label2.TabIndex = 27;
@@ -209,7 +211,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(36, 169);
+            label1.Location = new Point(36, 167);
             label1.Name = "label1";
             label1.Size = new Size(65, 21);
             label1.TabIndex = 25;
@@ -220,7 +222,7 @@
             // 
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.DarkGreen;
-            button2.Location = new Point(154, 439);
+            button2.Location = new Point(154, 473);
             button2.Name = "button2";
             button2.Size = new Size(204, 36);
             button2.TabIndex = 38;
@@ -228,11 +230,32 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(36, 412);
+            label9.Name = "label9";
+            label9.Size = new Size(108, 21);
+            label9.TabIndex = 40;
+            label9.Text = "Durum(0/1) :";
+            // 
+            // txtDurum
+            // 
+            txtDurum.Location = new Point(152, 410);
+            txtDurum.Mask = "0";
+            txtDurum.Name = "txtDurum";
+            txtDurum.Size = new Size(206, 26);
+            txtDurum.TabIndex = 41;
+            txtDurum.ValidatingType = typeof(int);
+            // 
             // Musteriguncelle
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(405, 521);
+            Controls.Add(txtDurum);
+            Controls.Add(label9);
             Controls.Add(button2);
             Controls.Add(txtAra);
             Controls.Add(label8);
@@ -276,5 +299,7 @@
         private Label label2;
         private Label label1;
         private Button button2;
+        private Label label9;
+        private MaskedTextBox txtDurum;
     }
 }

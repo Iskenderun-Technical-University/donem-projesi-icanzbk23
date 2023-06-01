@@ -54,9 +54,10 @@ namespace Banka_Otomasyonu
             else
             {
                 con.Open();
-                SqlCommand komut = new SqlCommand("select * from musteriler where tcNo = @p1 and sifre = @p2", con);
+                SqlCommand komut = new SqlCommand("select * from musteriler where tcNo = @p1 and sifre = @p2 and durum = 1", con);
                 komut.Parameters.AddWithValue("@p1", kAdi);
                 komut.Parameters.AddWithValue("@p2", parola);
+
 
                 SqlDataReader dr = komut.ExecuteReader();
                 while (dr.Read())
@@ -77,12 +78,18 @@ namespace Banka_Otomasyonu
                 }
                 else
                 {
-                    MessageBox.Show("Hatalý Kullanýcý Adý/TC veya Parola !", "Hatalý Giriþ Denemesi");
+                    MessageBox.Show("Giriþ deðerlerinizi kontrol ediniz veya banka þubenizle görüþünüz !", "Hatalý Giriþ Denemesi");
                 }
-                
+
             }
             textBox1.Text = "";
             textBox2.Text = "";
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SifreUret su = new SifreUret(); 
+            su.Show();  
         }
     }
 }
